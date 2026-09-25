@@ -20,6 +20,10 @@
     "format": "prettier --write .",
     "prepare": "husky",
     "browser:build": "node scripts/build-browser-diagnostics.mjs"
+    "build:pages": "node scripts/build-pages.mjs",
+"deploy:pages": "wrangler pages deploy ./dist --config wrangler.pages.toml",
+"pages:dev": "wrangler pages devs.toml",
+"preview:pages": "wrangler pages dev ./l --port 8788",
   },
   "dependencies": {
     "@cloudflare/speedtest": "1.13.0",
